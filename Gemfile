@@ -4,6 +4,7 @@ gem 'sqlite3'
 gem 'devise'
 gem 'figaro'
 gem 'jquery-rails'
+gem 'bootstrap-sass'
 
 group :assets do
   gem 'sass-rails', '~> 4.0.0'
