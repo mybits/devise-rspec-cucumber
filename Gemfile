@@ -5,6 +5,7 @@ gem 'devise'
 gem 'figaro'
 gem 'jquery-rails'
 gem 'bootstrap-sass'
+gem 'haml-rails'
 
 group :assets do
   gem 'sass-rails', '~> 4.0.0'
@@ -17,6 +18,7 @@ group :development do
   gem 'quiet_assets'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'html2haml'
 end
 
 group :development, :test do
