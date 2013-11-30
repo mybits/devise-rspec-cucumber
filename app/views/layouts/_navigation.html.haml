@@ -1,4 +1,4 @@
-= link_to "Devise-rspec-cucumber", root_path, class: "brand"
+= link_to "Devise-rspec-cucumber", unauthenticated_root_path, class: "brand"
 %ul.nav
   - if user_signed_in?
     %li
@@ -11,4 +11,4 @@
       = link_to "Edit", edit_user_registration_path
   - else
     %li
-      = link_to "Sing up", new_user_registrationa_path
+      = link_to "Sing up", new_user_registration_path
