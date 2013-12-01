@@ -1,5 +1,4 @@
 DeviseRspecCucumber::Application.routes.draw do
-  get "users/show"
   authenticated :user do
     root to: "users#index", as: :authenticated_root
   end
@@ -7,10 +6,9 @@ DeviseRspecCucumber::Application.routes.draw do
   unauthenticated do
     root to: "home#index", as: :unauthenticated_root
     devise_for :users
+    resources :users
   end
 
 
-  # root :to => "home#index"
-  # devise_for :users
 end
 
