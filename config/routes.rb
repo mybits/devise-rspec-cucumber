@@ -1,4 +1,5 @@
 DeviseRspecCucumber::Application.routes.draw do
+  get "users/show"
   authenticated :user do
     root to: "users#index", as: :authenticated_root
   end
