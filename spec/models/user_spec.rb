@@ -5,8 +5,8 @@ describe User do
   before(:each) do
     @attr = {
       name: "Example User",
-      email: "user@example.com"
-      password: "changeme"
+      email: "user@example.com",
+      password: "changeme",
       password_confirmation: "changeme"
     }
   end
@@ -25,13 +25,15 @@ describe User do
     addresses.each do |address|
       valid_email_user = User.new(@attr.merge(email: address))
       valid_email_user.should be_valid
+    end
   end
 
   it "should reject invalid email addresses" do
     addresses = %w[user@foo,com user_at_foo.org example.user@foo.]
-    addresses.each do |address|
-      invalid_email_user = User.new(@attr.merge(email: address))
-      invalid_email_user.should_not be_valid
+      addresses.each do |address|
+        invalid_email_user = User.new(@attr.merge(email: address))
+        invalid_email_user.should_not be_valid
+      end
   end
 
   it "should reject duplicate email addresses" do
